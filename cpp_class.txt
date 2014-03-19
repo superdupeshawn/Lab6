@@ -1,0 +1,20 @@
+// http://www.cplusplus.com/doc/tutorial/inheritance/
+class Polygon {
+  protected: #This encapsulates the width and height variables to only int type.
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b;}
+ };
+
+class Rectangle: public Polygon { #Rectangle also inherits the width and height from Polygon
+  public:
+    int area ()
+      { return width * height; }
+ };
+
+class Triangle: public Polygon { #Triangle inherits the width and hidth of Polygon
+  public:
+    int area ()
+      { return width * height / 2; }
+  };

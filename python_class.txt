@@ -1,0 +1,16 @@
+# https://wiki.python.org/moin/SimplePrograms
+
+##################################
+The BankAccount class has to inheritate some object
+amount so that it can use the interfaces that are polymorphed
+(deposit, withdraw, overdrawn)
+##################################
+class BankAccount(object):
+    def __init__(self, initial_balance=0):
+        self.balance = initial_balance
+    def deposit(self, amount):
+        self.balance += amount
+    def withdraw(self, amount):
+        self.balance -= amount
+    def overdrawn(self):
+        return self.balance < 0

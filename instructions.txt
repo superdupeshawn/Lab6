@@ -1,0 +1,11 @@
+# Follow instructions below as best you can
+# If you are unsure, make an assumption and justify it
+# All write()ing must be legible!
+
+for code in ['php', 'ruby', 'java', 'python', 'cpp']
+	code.paper.write(your_name)
+	code.paper.write(what_is_the_code_doing)
+	for concept in CPTR125
+		code.paper.write(code.identify(concept))
+	code.paper.turn_in()
+classroom.exit()

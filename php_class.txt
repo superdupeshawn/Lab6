@@ -1,0 +1,40 @@
+/** http://www.phpclasses.org/browse/file/10053.html
+ *@package Numbers
+ *@author  Serkan Ceylani serkan@turk-php.com
+ *@copyright 2005 turk-php.com
+ */
+
+############################################
+The class numbers just gets the numbers for an array
+and then construcs them accordingly. _construct inheritates
+the numbers and getNumbersArray is polymorphism I'm pretty
+sure.
+############################################
+class Numbers {
+    public $number  = array();
+    function Numbers ($number) {
+        $this->__construct($number);
+    }
+    function __construct ($num) {
+        if (is_array($num)){
+            if (empty($this->numCount)){
+            $this->numCount = count ($num);
+            }
+            for ($i=0;$i<$this->numCount;$i++) {
+               if (is_numeric ($num[$i])){
+                $this->number[] = new Numbers($num[$i]);
+               }
+            }
+        }
+        if (is_numeric($num)){
+            $this->number = $num;
+        }
+    }
+    function getNumbersArray () {
+        $this->numbersArray = array();
+        for ($i=0;$i<$this->numCount;$i++){
+            $this->numbersArray[] =  $this->number[$i]->number;
+        }
+        return $this->numbersArray;
+    }
+}

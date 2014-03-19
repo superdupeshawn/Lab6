@@ -1,0 +1,35 @@
+// http://www.tutorialspoint.com/java/java_object_classes.htm
+
+###########################################
+The program has all public instances so the encapsulation is 
+public and not private at all. Variables are inherited on the need
+and basis of the function. I think public void printEmployee is 
+displaying polymorphism because it takes the interface for only
+certain variables.
+###########################################
+import java.io.*;
+public class Employee{
+   String name;
+   int age;
+   String designation;
+   double salary;
+	
+   public Employee(String name){
+      this.name = name;
+   }
+   public void empAge(int empAge){
+      age =  empAge;
+   }
+   public void empDesignation(String empDesig){
+      designation = empDesig;
+   }
+   public void empSalary(double empSalary){
+      salary = empSalary;
+   }
+   public void printEmployee(){
+      System.out.println("Name:"+ name );
+      System.out.println("Age:" + age );
+      System.out.println("Designation:" + designation );
+      System.out.println("Salary:" + salary);
+   }
+}
